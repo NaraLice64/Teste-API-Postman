@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "27e8e7a8-dd12-46e7-ab21-70b8cdea01c1",
+		"name": "Teste de API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23559786"
+	},
+	"item": [
+		{
+			"name": "Buscar todas as datas de feriado",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://dadosbr.github.io/feriados/nacionais.json",
+					"protocol": "http",
+					"host": [
+						"dadosbr",
+						"github",
+						"io"
+					],
+					"path": [
+						"feriados",
+						"nacionais.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar feriados usando filtros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://dadosbr.github.io/feriados/nacionais.json?title=Nossa Senhora Aparecida&date=12/10&description=Padroeira do Brasil",
+					"protocol": "http",
+					"host": [
+						"dadosbr",
+						"github",
+						"io"
+					],
+					"path": [
+						"feriados",
+						"nacionais.json"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Nossa Senhora Aparecida"
+						},
+						{
+							"key": "date",
+							"value": "12/10"
+						},
+						{
+							"key": "description",
+							"value": "Padroeira do Brasil"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
